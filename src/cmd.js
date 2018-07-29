@@ -63,7 +63,7 @@ module.exports = class Cmd extends Output {
       str += `${row.join(' ')}${eol}`;
     });
 
-    this.stdout.write(`${str.trim()}${end}`);
+    this.stdout.write(`${str}${end}`);
 
     return this;
   }

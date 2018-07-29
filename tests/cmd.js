@@ -165,17 +165,17 @@ describe('Cmd', () => {
 
       it('should ouput correctly in flat mode', () => {
         cmd.setMode('flat').out();
-        expect(output).to.equal('0 0 0 0\n');
+        expect(output).to.equal('0 0 0 0 \n');
       });
 
       it('should ouput correctly in 2d mode', () => {
         cmd.setMode('2d').out();
-        expect(output).to.equal('0 0\n0 0');
+        expect(output).to.equal('0 0\n0 0\n');
       });
 
       it('should fallback to flat in unsupported mode', () => {
         cmd.setMode('bad').out();
-        expect(output).to.equal('0 0 0 0\n');
+        expect(output).to.equal('0 0 0 0 \n');
       });
     });
   });
